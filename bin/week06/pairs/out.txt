@@ -1,0 +1,174 @@
+
+TEST CASES
+case	SensorType	WeaponType	DataLink	TargetType	PlatformType	pairings
+1	S1	W1	Yes	T1	P1	10
+2	S1	W2	No	T2	P2	10
+3	S2	W2	Yes	T1	P3	9
+4	S2	W1	No	T2	P1	8
+5	S3	W3	No	T1	P2	9
+6	S3	W4	Yes	T2	P3	9
+7	S4	W3	No	T3	P3	9
+8	S4	W4	Yes	T4	P2	9
+9	S5	W4	No	T3	P1	8
+10	S5	W3	Yes	T4	P1	7
+11	S1	W1	Yes	T3	P2	5
+12	S1	W2	No	T4	P3	5
+13	S2	W1	No	T5	P2	5
+14	S3	W2	Yes	T5	P1	7
+15	S4	W1	~Yes	T5	P3	4
+16	S4	W4	~No	T1	P1	3
+17	S5	W3	~Yes	T2	P2	3
+18	S5	W2	~No	T5	P3	3
+19	S2	W2	~Yes	T3	~P1	2
+20	S3	W1	~No	T4	~P3	3
+21	S1	W3	~No	T5	~P1	3
+22	S2	W3	~Yes	T4	~P2	2
+23	S4	W2	~No	T2	~P2	2
+24	S5	W1	~Yes	T1	~P3	2
+25	S1	W4	~Yes	T5	~P2	2
+26	S2	W4	~No	~T1	~P3	1
+27	S3	~W3	~Yes	T3	~P3	1
+
+PAIRING DETAILS
+var1	var2	value1	value2	appearances	cases
+SensorType	TargetType	S1	T1	1	1
+SensorType	TargetType	S1	T2	1	2
+SensorType	TargetType	S1	T3	1	11
+SensorType	TargetType	S1	T4	1	12
+SensorType	TargetType	S1	T5	2	21, 25
+SensorType	TargetType	S2	T1	2	3, 26
+SensorType	TargetType	S2	T2	1	4
+SensorType	TargetType	S2	T3	1	19
+SensorType	TargetType	S2	T4	1	22
+SensorType	TargetType	S2	T5	1	13
+SensorType	TargetType	S3	T1	1	5
+SensorType	TargetType	S3	T2	1	6
+SensorType	TargetType	S3	T3	1	27
+SensorType	TargetType	S3	T4	1	20
+SensorType	TargetType	S3	T5	1	14
+SensorType	TargetType	S4	T1	1	16
+SensorType	TargetType	S4	T2	1	23
+SensorType	TargetType	S4	T3	1	7
+SensorType	TargetType	S4	T4	1	8
+SensorType	TargetType	S4	T5	1	15
+SensorType	TargetType	S5	T1	1	24
+SensorType	TargetType	S5	T2	1	17
+SensorType	TargetType	S5	T3	1	9
+SensorType	TargetType	S5	T4	1	10
+SensorType	TargetType	S5	T5	1	18
+SensorType	WeaponType	S1	W1	2	1, 11
+SensorType	WeaponType	S1	W2	2	2, 12
+SensorType	WeaponType	S1	W3	1	21
+SensorType	WeaponType	S1	W4	1	25
+SensorType	WeaponType	S2	W1	2	4, 13
+SensorType	WeaponType	S2	W2	2	3, 19
+SensorType	WeaponType	S2	W3	1	22
+SensorType	WeaponType	S2	W4	1	26
+SensorType	WeaponType	S3	W1	1	20
+SensorType	WeaponType	S3	W2	1	14
+SensorType	WeaponType	S3	W3	2	5, 27
+SensorType	WeaponType	S3	W4	1	6
+SensorType	WeaponType	S4	W1	1	15
+SensorType	WeaponType	S4	W2	1	23
+SensorType	WeaponType	S4	W3	1	7
+SensorType	WeaponType	S4	W4	2	8, 16
+SensorType	WeaponType	S5	W1	1	24
+SensorType	WeaponType	S5	W2	1	18
+SensorType	WeaponType	S5	W3	2	10, 17
+SensorType	WeaponType	S5	W4	1	9
+SensorType	PlatformType	S1	P1	2	1, 21
+SensorType	PlatformType	S1	P2	3	2, 11, 25
+SensorType	PlatformType	S1	P3	1	12
+SensorType	PlatformType	S2	P1	2	4, 19
+SensorType	PlatformType	S2	P2	2	13, 22
+SensorType	PlatformType	S2	P3	2	3, 26
+SensorType	PlatformType	S3	P1	1	14
+SensorType	PlatformType	S3	P2	1	5
+SensorType	PlatformType	S3	P3	3	6, 20, 27
+SensorType	PlatformType	S4	P1	1	16
+SensorType	PlatformType	S4	P2	2	8, 23
+SensorType	PlatformType	S4	P3	2	7, 15
+SensorType	PlatformType	S5	P1	2	9, 10
+SensorType	PlatformType	S5	P2	1	17
+SensorType	PlatformType	S5	P3	2	18, 24
+SensorType	DataLink	S1	Yes	3	1, 11, 25
+SensorType	DataLink	S1	No	3	2, 12, 21
+SensorType	DataLink	S2	Yes	3	3, 19, 22
+SensorType	DataLink	S2	No	3	4, 13, 26
+SensorType	DataLink	S3	Yes	3	6, 14, 27
+SensorType	DataLink	S3	No	2	5, 20
+SensorType	DataLink	S4	Yes	2	8, 15
+SensorType	DataLink	S4	No	3	7, 16, 23
+SensorType	DataLink	S5	Yes	3	10, 17, 24
+SensorType	DataLink	S5	No	2	9, 18
+TargetType	WeaponType	T1	W1	2	1, 24
+TargetType	WeaponType	T1	W2	1	3
+TargetType	WeaponType	T1	W3	1	5
+TargetType	WeaponType	T1	W4	2	16, 26
+TargetType	WeaponType	T2	W1	1	4
+TargetType	WeaponType	T2	W2	2	2, 23
+TargetType	WeaponType	T2	W3	1	17
+TargetType	WeaponType	T2	W4	1	6
+TargetType	WeaponType	T3	W1	1	11
+TargetType	WeaponType	T3	W2	1	19
+TargetType	WeaponType	T3	W3	2	7, 27
+TargetType	WeaponType	T3	W4	1	9
+TargetType	WeaponType	T4	W1	1	20
+TargetType	WeaponType	T4	W2	1	12
+TargetType	WeaponType	T4	W3	2	10, 22
+TargetType	WeaponType	T4	W4	1	8
+TargetType	WeaponType	T5	W1	2	13, 15
+TargetType	WeaponType	T5	W2	2	14, 18
+TargetType	WeaponType	T5	W3	1	21
+TargetType	WeaponType	T5	W4	1	25
+TargetType	PlatformType	T1	P1	2	1, 16
+TargetType	PlatformType	T1	P2	1	5
+TargetType	PlatformType	T1	P3	3	3, 24, 26
+TargetType	PlatformType	T2	P1	1	4
+TargetType	PlatformType	T2	P2	3	2, 17, 23
+TargetType	PlatformType	T2	P3	1	6
+TargetType	PlatformType	T3	P1	2	9, 19
+TargetType	PlatformType	T3	P2	1	11
+TargetType	PlatformType	T3	P3	2	7, 27
+TargetType	PlatformType	T4	P1	1	10
+TargetType	PlatformType	T4	P2	2	8, 22
+TargetType	PlatformType	T4	P3	2	12, 20
+TargetType	PlatformType	T5	P1	2	14, 21
+TargetType	PlatformType	T5	P2	2	13, 25
+TargetType	PlatformType	T5	P3	2	15, 18
+TargetType	DataLink	T1	Yes	3	1, 3, 24
+TargetType	DataLink	T1	No	3	5, 16, 26
+TargetType	DataLink	T2	Yes	2	6, 17
+TargetType	DataLink	T2	No	3	2, 4, 23
+TargetType	DataLink	T3	Yes	3	11, 19, 27
+TargetType	DataLink	T3	No	2	7, 9
+TargetType	DataLink	T4	Yes	3	8, 10, 22
+TargetType	DataLink	T4	No	2	12, 20
+TargetType	DataLink	T5	Yes	3	14, 15, 25
+TargetType	DataLink	T5	No	3	13, 18, 21
+WeaponType	PlatformType	W1	P1	2	1, 4
+WeaponType	PlatformType	W1	P2	2	11, 13
+WeaponType	PlatformType	W1	P3	3	15, 20, 24
+WeaponType	PlatformType	W2	P1	2	14, 19
+WeaponType	PlatformType	W2	P2	2	2, 23
+WeaponType	PlatformType	W2	P3	3	3, 12, 18
+WeaponType	PlatformType	W3	P1	2	10, 21
+WeaponType	PlatformType	W3	P2	3	5, 17, 22
+WeaponType	PlatformType	W3	P3	2	7, 27
+WeaponType	PlatformType	W4	P1	2	9, 16
+WeaponType	PlatformType	W4	P2	2	8, 25
+WeaponType	PlatformType	W4	P3	2	6, 26
+WeaponType	DataLink	W1	Yes	4	1, 11, 15, 24
+WeaponType	DataLink	W1	No	3	4, 13, 20
+WeaponType	DataLink	W2	Yes	3	3, 14, 19
+WeaponType	DataLink	W2	No	4	2, 12, 18, 23
+WeaponType	DataLink	W3	Yes	4	10, 17, 22, 27
+WeaponType	DataLink	W3	No	3	5, 7, 21
+WeaponType	DataLink	W4	Yes	3	6, 8, 25
+WeaponType	DataLink	W4	No	3	9, 16, 26
+PlatformType	DataLink	P1	Yes	4	1, 10, 14, 19
+PlatformType	DataLink	P1	No	4	4, 9, 16, 21
+PlatformType	DataLink	P2	Yes	5	8, 11, 17, 22, 25
+PlatformType	DataLink	P2	No	4	2, 5, 13, 23
+PlatformType	DataLink	P3	Yes	5	3, 6, 15, 24, 27
+PlatformType	DataLink	P3	No	5	7, 12, 18, 20, 26

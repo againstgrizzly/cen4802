@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="cen4802">
+	<property environment="env"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.8"/>
+	<property name="source" value="1.8"/>
+	<property name="bindir" value="../bin"/>
+	
+	<!-- Update the values to your folder locations -->
+	<property name="lib" value="C:\projects\school\ucf\CEN4802\2015-fall\cen4802\lib"/>	 	
+	<property name="src" value="C:\projects\school\ucf\CEN4802\2015-fall\cen4802\src"/>
+
+	<target name="init" description="Creates the target bin folder">
+		<mkdir dir="${bindir}"/> <!-- This is build in the week13 folder structure -->
+	</target>
+	
+	<target name="clean" description="Deletes the target bin folder">
+		<delete dir="${bindir}"/>
+	</target>
+	
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-project" name="build"/>
+	<target depends="cleanall,build" name="rebuild"/>
+	<target depends="init" name="build-project">
+		<echo message="Ant project: ${ant.project.name}: ${ant.file}"/>
+		
+		<javac debug="true" destdir="${bindir}" includeantruntime="false" source="${source}" target="${target}">
+			<src path="${src}\week13"/>	
+			<src path="${src}\test"/>
+			<classpath>
+		        <pathelement path="${lib}\hamcrest-core-1.3.jar"/>
+		        <pathelement path="${lib}\junit-4.12.jar"/>		        
+		        <pathelement path="${lib}\javax.servlet.jsp_2.2.0.v201112011158.jar"/>
+		        <pathelement path="${lib}\javax.servlet_3.0.0.v201112011016.jar"/>
+		        <pathelement path="${lib}\jdom-2.0.5.jar"/>
+		        <pathelement path="${lib}\mysql-connector-java-5.1.32-bin.jar"/>
+			</classpath>
+		</javac>
+	</target>
+</project>

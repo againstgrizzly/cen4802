@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="cen4802">
+	<property environment="env"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.8"/>
+	<property name="source" value="1.8"/>
+	<!-- Update the value to your folder location -->
+	<property name="lib" value="../../lib"/>
+	<property name="absolute..lib.path" location="${lib}"/>
+	<target name="init" description="Creates the target bin folder">
+		<mkdir dir="../../bin"/>
+	</target>
+	<target name="clean" description="Deletes the target bin folder">
+		<delete dir="../../bin"/>
+	</target>
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-project" name="build"/>
+	<target depends="cleanall,build" name="rebuild"/>
+	<target depends="init" name="build-project">
+		<echo message="Ant project: ${ant.project.name}: ${ant.file}"/>
+		<echo message="lib folder: ${lib}"/>
+		<echo message="lib folder: ${absolute..lib.path}"/>
+		<javac debug="true" destdir="../../bin" includeantruntime="false" source="${source}" target="${target}">
+			<src path="."/>
+			<!-- This assumes you have configured the unittest folder as recommended
+			     if yours is different you will need to update this
+			 -->
+			<src path="../../unittest/week04/"/>
+			<classpath>
+				<pathelement path="${lib}\hamcrest-core-1.3.jar"/>
+				<pathelement path="${lib}\junit-4.12.jar"/>
+			</classpath>
+		</javac>
+	</target>
+</project>

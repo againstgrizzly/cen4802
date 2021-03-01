@@ -1,0 +1,3 @@
+combinations: 600
+allpairs: 27
+pict: 26
