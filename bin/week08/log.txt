@@ -1,0 +1,96 @@
+Level out: 0test driven development:falsetest-driven development:falsetdd:
+combinatorial
+Level in: 0
+Input word: abc
+Input perm: 
+-Level in: 1
+-Input word: bc
+-Input perm: a
+--Level in: 2
+--Input word: c
+--Input perm: ab
+---Level in: 3
+---Input word: 
+---Input perm: abc
+---adding: abc
+---Level out: 3
+--Level out: 2
+--Level in: 2
+--Input word: b
+--Input perm: ac
+---Level in: 3
+---Input word: 
+---Input perm: acb
+---adding: acb
+---Level out: 3
+--Level out: 2
+-Level out: 1
+-Level in: 1
+-Input word: ac
+-Input perm: b
+--Level in: 2
+--Input word: c
+--Input perm: ba
+---Level in: 3
+---Input word: 
+---Input perm: bac
+---adding: bac
+---Level out: 3
+--Level out: 2
+--Level in: 2
+--Input word: a
+--Input perm: bc
+---Level in: 3
+---Input word: 
+---Input perm: bca
+---adding: bca
+---Level out: 3
+--Level out: 2
+-Level out: 1
+-Level in: 1
+-Input word: ab
+-Input perm: c
+--Level in: 2
+--Input word: b
+--Input perm: ca
+---Level in: 3
+---Input word: 
+---Input perm: cab
+---adding: cab
+---Level out: 3
+--Level out: 2
+--Level in: 2
+--Input word: a
+--Input perm: cb
+---Level in: 3
+---Input word: 
+---Input perm: cba
+---adding: cba
+---Level out: 3
+--Level out: 2
+-Level out: 1
+Level out: 0
+test driven development:falsetest-driven development:falsetdd:
+combinatorial
+Level in: 0
+Input word: ab
+Input perm: 
+-Level in: 1
+-Input word: b
+-Input perm: a
+--Level in: 2
+--Input word: 
+--Input perm: ab
+--adding: ab
+--Level out: 2
+-Level out: 1
+-Level in: 1
+-Input word: a
+-Input perm: b
+--Level in: 2
+--Input word: 
+--Input perm: ba
+--adding: ba
+--Level out: 2
+-Level out: 1
+Level out: 0

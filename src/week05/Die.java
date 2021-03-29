@@ -33,7 +33,7 @@ public class Die
     // Rolls the dice
     public void roll()
     {
-        number = random.nextInt(MAX_NUMBER - MIN_NUMBER + 1);
+        number = random.nextInt((MAX_NUMBER - MIN_NUMBER) + 1) + MIN_NUMBER;
     }
 
     // Returns the number on this dice

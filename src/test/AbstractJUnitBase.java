@@ -52,8 +52,8 @@ public class AbstractJUnitBase
 	{
 		// set defaults
 		String filePath = "";
-		String targetFolder= "\\";
-		String altTargetFolder = "\\" + pathAdjustment;
+		String targetFolder= "/";
+		String altTargetFolder = "/" + pathAdjustment;
 		
 		// find current bin location
 		File curDir1 = getBinFolder();
